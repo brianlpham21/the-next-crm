@@ -1,18 +1,38 @@
+import Board from "@/components/board";
+import FlipCard from "@/components/flipcard";
 import Image from "next/image";
 
-export default function Home() {
+export default function LandingPage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div>
+      <div className="w-full h-96 relative overflow-hidden">
         <Image
-          className="dark:invert"
-          src="/the-next-crm/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src={"/landingpage.jpg"}
+          alt="Fading Image"
+          layout="fill"
+          objectFit="cover"
+          className="opacity-0 animate-fadeIn"
         />
-      </main>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div>
+          <div className="flex flex-wrap justify-center gap-6 p-6">
+            <FlipCard
+              frontContent="Hover to Flip"
+              backContent="Unhover to Flip Back"
+            />
+            <FlipCard
+              frontContent="Click to Flip"
+              backContent="Click to Flip Back"
+              flipOnClick
+            />
+          </div>
+        </div>
+        <div>
+          <Board />
+        </div>
+        <div>Scroll Animation</div>
+      </div>
     </div>
   );
 }
