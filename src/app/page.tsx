@@ -12,6 +12,7 @@ export default function LandingPage() {
       {/* css for basic web page container  */}
 
       <FlipCardSection />
+
       <div>
         <Board />
       </div>

@@ -17,7 +17,7 @@ export default function Hero() {
   const moveRight = useTransform(scrollYProgress, [0, 1], [0, 1500]);
 
   return (
-    <div className="w-full h-screen opacity-0 animate-fadeIn">
+    <div className="w-full h-screen opacity-0 animate-fadeIn overflow-hidden">
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center transform -rotate-12 -translate-y-5">
           <motion.div style={{ x: moveLeft }}>
