@@ -10,7 +10,7 @@ interface ItemProps {
 
 export function Item({ id }: ItemProps) {
   return (
-    <div className="flex items-center justify-center w-full h-10 bg-white my-2 border-2">
+    <div className="flex items-center justify-center w-full h-10 bg-gray-600 my-2 border-2 border-gray-700 rounded-md text-gray-200 py-5">
       {id}
     </div>
   );

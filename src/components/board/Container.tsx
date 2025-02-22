@@ -8,11 +8,18 @@ import {
 } from "@dnd-kit/sortable";
 
 import SortableItem from "./SortableItem";
+import { Shrikhand } from "next/font/google";
 
 interface ContainerProps {
   id: string;
   items: string[];
 }
+
+const shrikhand = Shrikhand({
+  display: "swap",
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export default function Container({ id, items }: ContainerProps) {
   const { setNodeRef } = useDroppable({
@@ -25,7 +32,12 @@ export default function Container({ id, items }: ContainerProps) {
       items={items}
       strategy={verticalListSortingStrategy}
     >
-      <div ref={setNodeRef} className="px-2 m-2 flex-1 bg-gray-100 rounded-md">
+      <div ref={setNodeRef} className="px-2 m-2 flex-1 bg-gray-500 rounded-md">
+        <h1
+          className={`flex justify-center pt-2 text-gray-200 ${shrikhand.className}`}
+        >
+          Container
+        </h1>
         {items.map((id: string) => (
           <SortableItem key={id} id={id} />
         ))}

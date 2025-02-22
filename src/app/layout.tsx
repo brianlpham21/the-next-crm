@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 
 import StoreProvider from "./StoreProvider";
 // import Header from "@/components/header";
@@ -20,9 +21,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <StoreProvider>
-          {/* <Header /> */}
-          {children}
-          <Footer />
+          <ThemeProvider attribute="class" defaultTheme="light">
+            {/* <Header /> */}
+            {children}
+            <Footer />
+          </ThemeProvider>
         </StoreProvider>
       </body>
     </html>

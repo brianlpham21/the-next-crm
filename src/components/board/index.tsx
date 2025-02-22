@@ -17,8 +17,8 @@ import Container from "./Container";
 
 export default function Board() {
   const [items, setItems] = useState<Record<string, string[]>>({
-    container1: ["Lead 1", "Lead 2", "Lead 3"],
-    container2: ["Lead 4", "Lead 5", "Lead 6"],
+    container1: ["Lead 1", "Lead 2"],
+    container2: ["Lead 3", "Lead 4", "Lead 5", "Lead 6"],
     container3: ["Lead 7", "Lead 8", "Lead 9"],
     container4: [],
   });
