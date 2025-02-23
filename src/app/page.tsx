@@ -21,7 +21,6 @@ export default function LandingPage() {
       <div>
         <Board />
       </div>
-      <div>Scroll Animation</div>
 
       <div className="fixed top-5 right-5 z-10">
         <button
