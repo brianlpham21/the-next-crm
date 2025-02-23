@@ -26,7 +26,7 @@ export default function Footer() {
             >
               About Us
             </h2>
-            <p>
+            <p className="text-gray-600 dark:text-gray-300">
               We provide cutting-edge solutions for modern businesses. Our CRM
               platform helps you manage customer relationships efficiently.
             </p>
