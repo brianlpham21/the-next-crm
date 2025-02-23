@@ -14,12 +14,34 @@ import {
 import { arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 
 import Container from "./Container";
+import { Shrikhand } from "next/font/google";
+
+const containerNames = ["To Do", "In Progress", "Testing", "Done"];
+
+const shrikhand = Shrikhand({
+  display: "swap",
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export default function Board() {
   const [items, setItems] = useState<Record<string, string[]>>({
-    container1: ["Lead 1", "Lead 2"],
-    container2: ["Lead 3", "Lead 4", "Lead 5", "Lead 6"],
-    container3: ["Lead 7", "Lead 8", "Lead 9"],
+    container1: [
+      "[FE] Optimize Image Loading with Next.js",
+      "[FE] Setup End-to-End Testing with Cypress",
+    ],
+    container2: [
+      "[BE] Add WebSocket Support for Real-Time Updates",
+      "[FE] Create Reusable Form Validation Component",
+      "[FE] Create Error Boundary Component to Handle UI Failures",
+      "[FE] Implement Slack Integration",
+    ],
+    container3: [
+      "[FE] Improve Mobile Responsiveness for Landing Page",
+      "[BE] Improve Error Handling in API Responses",
+      "[DevOps] Improve CI/CD Pipeline for Faster Deployments",
+      "[DevOps] Fix Dockerfile for Production Build",
+    ],
     container4: [],
   });
 
@@ -42,8 +64,8 @@ export default function Board() {
     const { active, over } = event;
     if (!over) return;
 
-    const id = String(active.id); // Convert to string
-    const overId = String(over.id); // Convert to string
+    const id = String(active.id);
+    const overId = String(over.id);
 
     const activeContainer = findContainer(id);
     const overContainer = findContainer(overId);
@@ -87,10 +109,10 @@ export default function Board() {
 
   function handleDragEnd(event: DragEndEvent) {
     const { active, over } = event;
-    if (!over) return; // Ensure 'over' is not null
+    if (!over) return;
 
-    const id = String(active.id); // Convert id to string
-    const overId = String(over.id); // Convert overId to string
+    const id = String(active.id);
+    const overId = String(over.id);
 
     const activeContainer = findContainer(id);
     const overContainer = findContainer(overId);
@@ -119,17 +141,29 @@ export default function Board() {
   }
 
   return (
-    <div className="flex flex-row">
-      <DndContext
-        sensors={sensors}
-        collisionDetection={closestCorners}
-        onDragOver={handleDragOver}
-        onDragEnd={handleDragEnd}
+    <div className="lg:mx-14 text-center">
+      <h1
+        className={`${shrikhand.className} text-3xl text-gray-700 dark:text-gray-300 mb-3`}
       >
-        {Object.entries(items).map(([key, value]) => (
-          <Container key={key} id={key} items={value} />
-        ))}
-      </DndContext>
+        The Productivity Playground
+      </h1>
+      <div className="flex flex-col md:flex-row">
+        <DndContext
+          sensors={sensors}
+          collisionDetection={closestCorners}
+          onDragOver={handleDragOver}
+          onDragEnd={handleDragEnd}
+        >
+          {Object.entries(items).map(([key, value], index) => (
+            <Container
+              key={key}
+              id={key}
+              items={value}
+              containerName={containerNames[index]}
+            />
+          ))}
+        </DndContext>
+      </div>
     </div>
   );
 }

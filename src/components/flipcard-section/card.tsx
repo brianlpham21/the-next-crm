@@ -48,7 +48,7 @@ export default function Card({
               : "group-hover:[transform:rotateY(180deg)]"
           }`}
       >
-        <div className="absolute w-full h-full flex rounded-xl text-center items-center justify-center text-xl font-bold [backface-visibility:hidden] bg-gray-50 dark:bg-gray-700 dark:text-gray-200 p-2">
+        <div className="absolute w-full h-full flex rounded-xl text-center items-center justify-center text-2xl font-bold [backface-visibility:hidden] bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-200 p-2">
           {photoUrl ? (
             <Image
               alt=""

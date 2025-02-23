@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 
 import StoreProvider from "./StoreProvider";
-// import Header from "@/components/header";
 import Footer from "@/components/footer";
 
 import "./globals.css";
@@ -22,7 +21,6 @@ export default function RootLayout({
       <body>
         <StoreProvider>
           <ThemeProvider attribute="class" defaultTheme="light">
-            {/* <Header /> */}
             {children}
             <Footer />
           </ThemeProvider>

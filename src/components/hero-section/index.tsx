@@ -22,21 +22,21 @@ export default function Hero() {
         <div className="text-center transform -rotate-12 -translate-y-5 text-gray-700 dark:text-white">
           <motion.div style={{ x: moveLeft }}>
             <h1
-              className={`text-9xl font-bold italic ${shrikhand.className} font-mono transform scale-100 translate-y-3`}
+              className={`text-6xl md:text-9xl font-bold italic ${shrikhand.className} transform scale-100 translate-y-1 md:translate-y-3`}
             >
               THE
             </h1>
           </motion.div>
           <motion.div style={{ x: moveRight }}>
             <h1
-              className={`text-9xl font-bold italic ${shrikhand.className} font-mono transform scale-150`}
+              className={`text-6xl md:text-9xl font-bold italic ${shrikhand.className} transform scale-150`}
             >
               NEXT
             </h1>
           </motion.div>
           <motion.div style={{ x: moveLeft }}>
             <h1
-              className={`text-9xl font-bold italic ${shrikhand.className} font-mono transform scale-125 -translate-y-1`}
+              className={`text-6xl md:text-9xl font-bold italic ${shrikhand.className} transform scale-125 md:-translate-y-1`}
             >
               CRM
             </h1>

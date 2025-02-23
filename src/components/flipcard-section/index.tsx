@@ -85,7 +85,7 @@ export default function FlipCardSection() {
       photoUrl:
         "https://images.unsplash.com/photo-1530908295418-a12e326966ba?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       backContent:
-        "Stay above the clouds, the sky&apos;s the limit for your customer relationships",
+        "Stay above the clouds, the sky's the limit for your customer relationships",
       flipOnClick: false,
     },
     {
@@ -121,7 +121,7 @@ export default function FlipCardSection() {
   ];
 
   return (
-    <div ref={ref} className="relative m-auto p-auto w-full lg:mb-10">
+    <div ref={ref} className="relative m-auto p-auto w-full mb-10 lg:mb-24">
       <motion.div className="flex overflow-x-scroll" style={{ opacity }}>
         <div className="flex flex-nowrap gap-2 ml-10 mr-5 py-5">
           {cards.map((card, index) => (

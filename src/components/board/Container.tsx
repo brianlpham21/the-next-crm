@@ -8,20 +8,24 @@ import {
 } from "@dnd-kit/sortable";
 
 import SortableItem from "./SortableItem";
-import { Shrikhand } from "next/font/google";
+import { Roboto_Slab } from "next/font/google";
 
 interface ContainerProps {
   id: string;
   items: string[];
+  containerName: string;
 }
 
-const shrikhand = Shrikhand({
-  display: "swap",
+const robotoSlab = Roboto_Slab({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "800"],
 });
 
-export default function Container({ id, items }: ContainerProps) {
+export default function Container({
+  id,
+  items,
+  containerName,
+}: ContainerProps) {
   const { setNodeRef } = useDroppable({
     id,
   });
@@ -34,12 +38,13 @@ export default function Container({ id, items }: ContainerProps) {
     >
       <div
         ref={setNodeRef}
-        className="px-2 m-2 flex-1 rounded-md bg-gray-300 dark:bg-gray-500"
+        className="px-2 m-2 flex-1 min-h-10 rounded-md bg-gray-300 dark:bg-gray-500"
       >
         <h1
-          className={`flex justify-center pt-2 text-gray-800 dark:text-gray-200 ${shrikhand.className}`}
+          className={`flex justify-center pt-2 text-gray-800 dark:text-gray-200 ${robotoSlab.className}`}
+          style={{ fontWeight: "800" }}
         >
-          Container
+          {containerName}
         </h1>
         {items.map((id: string) => (
           <SortableItem key={id} id={id} />
