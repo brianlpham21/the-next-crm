@@ -17,7 +17,7 @@ export default function FlipCardSection() {
   return (
     <div ref={ref} className="relative m-auto p-auto w-full lg:mb-10">
       <motion.div className="flex overflow-x-scroll" style={{ opacity }}>
-        <div className="flex flex-nowrap gap-2 ml-10 mr-5">
+        <div className="flex flex-nowrap gap-2 ml-10 mr-5 py-5">
           <Card
             frontContent="Click to Flip"
             backContent="Click to Flip Back"

@@ -19,24 +19,24 @@ export default function Hero() {
   return (
     <div className="w-full h-screen opacity-0 animate-fadeIn overflow-hidden">
       <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center transform -rotate-12 -translate-y-5">
+        <div className="text-center transform -rotate-12 -translate-y-5 text-gray-700 dark:text-white">
           <motion.div style={{ x: moveLeft }}>
             <h1
-              className={`text-9xl font-bold italic text-white ${shrikhand.className} font-mono transform scale-100 translate-y-3`}
+              className={`text-9xl font-bold italic ${shrikhand.className} font-mono transform scale-100 translate-y-3`}
             >
               THE
             </h1>
           </motion.div>
           <motion.div style={{ x: moveRight }}>
             <h1
-              className={`text-9xl font-bold italic text-white ${shrikhand.className} font-mono transform scale-150`}
+              className={`text-9xl font-bold italic ${shrikhand.className} font-mono transform scale-150`}
             >
               NEXT
             </h1>
           </motion.div>
           <motion.div style={{ x: moveLeft }}>
             <h1
-              className={`text-9xl font-bold italic text-white ${shrikhand.className} font-mono transform scale-125 -translate-y-1`}
+              className={`text-9xl font-bold italic ${shrikhand.className} font-mono transform scale-125 -translate-y-1`}
             >
               CRM
             </h1>

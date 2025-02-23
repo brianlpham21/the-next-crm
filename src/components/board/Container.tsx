@@ -32,9 +32,12 @@ export default function Container({ id, items }: ContainerProps) {
       items={items}
       strategy={verticalListSortingStrategy}
     >
-      <div ref={setNodeRef} className="px-2 m-2 flex-1 bg-gray-500 rounded-md">
+      <div
+        ref={setNodeRef}
+        className="px-2 m-2 flex-1 rounded-md bg-gray-300 dark:bg-gray-500"
+      >
         <h1
-          className={`flex justify-center pt-2 text-gray-200 ${shrikhand.className}`}
+          className={`flex justify-center pt-2 text-gray-800 dark:text-gray-200 ${shrikhand.className}`}
         >
           Container
         </h1>
