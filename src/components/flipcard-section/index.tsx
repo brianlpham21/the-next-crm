@@ -97,6 +97,37 @@ export default function FlipCardSection() {
     {
       frontContent: (
         <div className="flex flex-col items-center gap-2">
+          AI-Enhanced CRM
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+            />
+          </svg>
+        </div>
+      ),
+      backContent:
+        "Leverage AI-driven insights to optimize sales pipelines and customer needs",
+      flipOnClick: true,
+    },
+    {
+      photoUrl:
+        "https://images.unsplash.com/photo-1513682121497-80211f36a7d3?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      backContent:
+        "In a busy world, our CRM helps lead you with clarity and purpose",
+      flipOnClick: false,
+    },
+    {
+      frontContent: (
+        <div className="flex flex-col items-center gap-2">
           Lightning-Fast Interface
           <svg
             xmlns="http://www.w3.org/2000/svg"

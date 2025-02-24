@@ -4,6 +4,7 @@ import Hero from "@/components/hero-section";
 import FlipCardSection from "@/components/flipcard-section";
 import Board from "@/components/board";
 import ThemeToggle from "@/components/theme-toggle";
+import Alert from "@/components/alert";
 
 export default function LandingPage() {
   return (
@@ -13,6 +14,7 @@ export default function LandingPage() {
       <Board />
 
       <ThemeToggle />
+      <Alert />
     </div>
   );
 }

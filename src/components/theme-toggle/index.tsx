@@ -6,7 +6,7 @@ export default function ThemeToggle() {
   const isDarkMode = theme === "dark";
 
   return (
-    <div className="fixed top-5 right-5 z-10">
+    <div className="fixed top-5 right-5 z-20">
       <button
         className="bg-gray-200 dark:bg-gray-700 text-black dark:text-white p-4 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-110 border-2 border-gray-300"
         onClick={() => setTheme(isDarkMode ? "light" : "dark")}

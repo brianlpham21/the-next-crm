@@ -14,8 +14,8 @@ export default {
         foreground: "var(--foreground)",
       },
       animation: {
-        fadeIn: "fadeIn 5s ease-in-out forwards",
-        fadeOut: "fadeOut 5s ease-in-out forwards",
+        fadeIn: "fadeIn 2s ease-in-out forwards",
+        fadeOut: "fadeOut 2s ease-in-out forwards",
       },
       keyframes: {
         fadeIn: {

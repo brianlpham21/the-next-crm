@@ -5,6 +5,7 @@ import StoreProvider from "./StoreProvider";
 import Footer from "@/components/footer";
 
 import "./globals.css";
+import Header from "@/components/header";
 
 export const metadata: Metadata = {
   title: "The Next CRM",
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body>
         <StoreProvider>
           <ThemeProvider attribute="class" defaultTheme="light">
+            <Header />
             {children}
             <Footer />
           </ThemeProvider>
